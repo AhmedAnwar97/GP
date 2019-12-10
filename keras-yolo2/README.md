@@ -8,8 +8,6 @@ keras >= 2.0.8
 imgaug
 1. Data preparation
 
-Download the Raccoon dataset from from https://github.com/experiencor/raccoon_dataset.
-
 Organize the dataset into 4 folders:
 
     train_image_folder <= the folder that contains the train images.
@@ -63,15 +61,9 @@ The configuration file is a json file, which looks like this:
 
 The model section defines the type of the model to construct as well as other parameters of the model such as the input image size and the list of anchors. The labels setting lists the labels to be trained on. Only images, which has labels being listed, are fed to the network. The rest images are simply ignored. By this way, a Dog Detector can easily be trained using VOC or COCO dataset by setting labels to ['dog'].
 
-Download pretrained weights for backend (tiny yolo, full yolo, squeezenet, mobilenet, and inceptionV3) at:
-
-https://1drv.ms/f/s!ApLdDEW3ut5fec2OzK4S4RpT-SU
 
 These weights must be put in the root folder of the repository. They are the pretrained weights for the backend only and will be loaded during model creation. The code does not work without these weights.
 
-The link to the pretrained weights for the whole model (both frontend and backend) of the raccoon detector can be downloaded at:
-
-https://1drv.ms/f/s!ApLdDEW3ut5feoZAEUwmSMYdPlY
 
 These weights can be used as the pretrained weights for any one class object detectors.
 3. Generate anchors for your dataset (optional)
